@@ -6,7 +6,7 @@ import Grid from "./Grid.vue";
 import { reactive } from "vue";
 const voicelessSound = reactive({
   horizontalAxis: ["a", "i", "u", "e", "o"],
-  verticalAxis: ["a", "k", "s", "t", "n", "h", "m", "y", "l", "w", "n"],
+  verticalAxis: ["a", "k", "s", "t", "n", "h", "m", "y", "l", "w", ""],
   data: [
     [
       {
@@ -281,7 +281,6 @@ const voicelessSound = reactive({
         sn: "50",
         t: "を",
         p: "o",
-        ue: true,
       },
     ],
     [
@@ -289,6 +288,30 @@ const voicelessSound = reactive({
         sn: "51",
         t: "ん",
         p: "n",
+      },
+      {
+        sn: "2",
+        t: "い",
+        p: "i",
+        ue: true,
+      },
+      {
+        sn: "3",
+        t: "う",
+        p: "u",
+        ue: true,
+      },
+      {
+        sn: "4",
+        t: "え",
+        p: "e",
+        ue: true,
+      },
+      {
+        sn: "5",
+        t: "お",
+        p: "o",
+        ue: true,
       },
     ],
   ],

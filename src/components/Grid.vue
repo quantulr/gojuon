@@ -2,14 +2,11 @@
   <h2 class="title">清音</h2>
   <div class="syllabay-wrap">
     <div class="header-row">
-      <span
-        class="header-item"
-        v-for="item in horizontalAxis"
-        :key="item"
-        >{{ item }}</span
-      >
+      <span class="header-item" v-for="item in horizontalAxis" :key="item">{{
+        item
+      }}</span>
     </div>
-    <div class="row" v-for="(row,index) in data" :key="row[0].sn">
+    <div class="row" v-for="(row, index) in data" :key="row[0].sn">
       <div class="header-column">
         <span>{{ verticalAxis[index] }}</span>
       </div>
@@ -22,7 +19,7 @@
       </div>
     </div>
   </div>
-  <audio :src="`/src/assets/voice/${src}.mp3`" id="voice"></audio>
+  <audio id="voice"></audio>
 </template>
 <script setup name="Grid">
 import { ref, nextTick, toRefs } from "vue";
@@ -37,15 +34,13 @@ const props = defineProps({
     default: 5,
   },
 });
-
-const { data, horizontalAxis, verticalAxis } = toRefs(props).source.value
-
-const src = ref("");
+const { data, horizontalAxis, verticalAxis } = toRefs(props).source.value;
+// const src = ref("");
 
 const play = (p) => {
   const el = document.querySelector(`#voice`);
-  console.log(el);
-  src.value = p;
+  // src.value = new URL(`../assets/voice/${p}.mp3`, import.meta.url).href;
+  el.src = new URL(`../assets/voice/${p}.mp3`, import.meta.url).href;
   nextTick(() => {
     el.play();
   });
