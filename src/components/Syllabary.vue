@@ -1,10 +1,12 @@
 <template>
   <Grid :source="voicelessSound"></Grid>
+  <Grid :source="voicedSound"></Grid>
 </template>
 <script setup name="Syllabary">
 import Grid from "./Grid.vue";
 import { reactive } from "vue";
 const voicelessSound = reactive({
+  title: "清音",
   horizontalAxis: ["a", "i", "u", "e", "o"],
   verticalAxis: ["a", "k", "s", "t", "n", "h", "m", "y", "l", "w", ""],
   data: [
@@ -290,25 +292,25 @@ const voicelessSound = reactive({
         p: "n",
       },
       {
-        sn: "2",
+        sn: "52",
         t: "い",
         p: "i",
         ue: true,
       },
       {
-        sn: "3",
+        sn: "53",
         t: "う",
         p: "u",
         ue: true,
       },
       {
-        sn: "4",
+        sn: "54",
         t: "え",
         p: "e",
         ue: true,
       },
       {
-        sn: "5",
+        sn: "55",
         t: "お",
         p: "o",
         ue: true,
@@ -316,5 +318,150 @@ const voicelessSound = reactive({
     ],
   ],
 });
+
+const voicedSound = reactive({
+  title: "浊音",
+  horizontalAxis: ["a", "i", "u", "e", "o"],
+  verticalAxis: ["g", "z", "d", "b", "p"],
+  data: [
+    [
+      {
+        sn: "1",
+        t: "が",
+        p: "ga",
+      },
+      {
+        sn: "2",
+        t: "ぎ",
+        p: "gi",
+      },
+      {
+        sn: "3",
+        t: "ぐ",
+        p: "gu",
+      },
+      {
+        sn: "4",
+        t: "げ",
+        p: "ge",
+      },
+      {
+        sn: "5",
+        t: "ご",
+        p: "go",
+      },
+    ],
+    [
+      {
+        sn: "6",
+        t: "ざ",
+        p: "za",
+      },
+      {
+        sn: "7",
+        t: "じ",
+        p: "ji",
+      },
+      {
+        sn: "8",
+        t: "ず",
+        p: "zu",
+      },
+      {
+        sn: "9",
+        t: "ぜ",
+        p: "ze",
+      },
+      {
+        sn: "10",
+        t: "ぞ",
+        p: "zo",
+      },
+    ],
+    [
+      {
+        sn: "11",
+        t: "だ",
+        p: "da",
+      },
+      {
+        sn: "12",
+        t: "ぢ",
+        p: "ji",
+      },
+      {
+        sn: "13",
+        t: "う",
+        p: "zu",
+      },
+      {
+        sn: "14",
+        t: "で",
+        p: "de",
+      },
+      {
+        sn: "15",
+        t: "ど",
+        p: "do",
+      },
+    ],
+    [
+      {
+        sn: "16",
+        t: "ば",
+        p: "ba",
+      },
+      {
+        sn: "17",
+        t: "び",
+        p: "bi",
+      },
+      {
+        sn: "18",
+        t: "ぶ",
+        p: "bu",
+      },
+      {
+        sn: "19",
+        t: "べ",
+        p: "be",
+      },
+      {
+        sn: "20",
+        t: "ぼ",
+        p: "bo",
+      },
+    ],
+    [
+      {
+        sn: "21",
+        t: "ぱ",
+        p: "pa",
+      },
+      {
+        sn: "22",
+        t: "ぴ",
+        p: "pi",
+      },
+      {
+        sn: "23",
+        t: "ぷ",
+        p: "pu",
+      },
+      {
+        sn: "24",
+        t: "ぺ",
+        p: "pe",
+      },
+      {
+        sn: "25",
+        t: "ぽ",
+        p: "po",
+      },
+    ],
+  ],
+});
+
+// const yoon = reactive({})
 </script>
 <style scoped lang="scss"></style>

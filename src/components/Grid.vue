@@ -1,5 +1,5 @@
 <template>
-  <h2 class="title">清音</h2>
+  <h2 class="title">{{ title }}</h2>
   <div class="syllabay-wrap">
     <div class="header-row">
       <span class="header-item" v-for="item in horizontalAxis" :key="item">{{
@@ -34,7 +34,8 @@ const props = defineProps({
     default: 5,
   },
 });
-const { data, horizontalAxis, verticalAxis } = toRefs(props).source.value;
+const { data, horizontalAxis, verticalAxis, title } =
+  toRefs(props).source.value;
 // const src = ref("");
 
 const play = (p) => {
