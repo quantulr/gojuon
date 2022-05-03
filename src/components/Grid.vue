@@ -36,7 +36,6 @@ const props = defineProps({
 });
 const { data, horizontalAxis, verticalAxis, title } =
   toRefs(props).source.value;
-// const src = ref("");
 
 const play = (p) => {
   const el = document.querySelector(`#voice`);
@@ -71,11 +70,12 @@ const play = (p) => {
       justify-content: center;
     }
     .item {
-      //   border: 1px solid blueviolet;
-      text-align: center;
       flex: 1;
       .content {
         height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .master {
           font-size: 24px;
         }
